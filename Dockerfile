@@ -132,6 +132,8 @@ RUN $ORACLE_BASE/oraInventory/orainstRoot.sh && \
 
 USER oracle
 WORKDIR /home/oracle
+COPY scripts/setup/ $ORACLE_BASE/scripts/setup/
+COPY scripts/startup/ $ORACLE_BASE/scripts/startup/
 
 HEALTHCHECK --interval=1m --start-period=5m \
    CMD "$ORACLE_BASE/$CHECK_DB_FILE" >/dev/null || exit 1

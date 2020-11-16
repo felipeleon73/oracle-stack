@@ -9,7 +9,7 @@ docker run -d --name $CONTAINER_NAME \
 -p 8080:8080 \
 -e TIME_ZONE="Europe/Rome" \
 -e ORACLE_EDITION=EE \
--e ORACLE_PWD=Oracle19 \
+-e ORACLE_PWD=Oracle2020 \
 -e ORACLE_SID=ORCLCDB \
 -e ORACLE_PDB=ORCLPDB1 \
 -e APEX_ADMIN_EMAIL=myemail@domain.com \

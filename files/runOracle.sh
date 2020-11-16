@@ -105,9 +105,7 @@ do
     echo "export ${i}" >> env_path.sh
 done
 sudo rm -f /etc/profile.d/env_path.sh
-sudo mv pippo.txt /etc/profile.d/env_path.sh
-#echo '#!/usr/bin/env bash'$'\n'$(env | egrep "^(PATH=|ORACLE_SID=|ORACLE_PDB=)") 
-#echo '#!/usr/bin/env bash'$'\n'$(env | egrep "^(PATH=|ORACLE_SID=|ORACLE_PDB=|ORACLE_HOME=)") | sudo tee /etc/profile.d/env_path.sh > /dev/null
+sudo mv env_path.sh /etc/profile.d/env_path.sh
 
 # Check whether container has enough memory
 # Github issue #219: Prevent integer overflow,
